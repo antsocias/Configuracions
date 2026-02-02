@@ -1,0 +1,83 @@
+{
+  "Dhcp4": {
+    "interfaces-config": {
+      "interfaces": ["eth0"]
+    },
+    "control-socket": {
+      "socket-type": "unix",
+      "socket-name": "/run/kea/kea4-ctrl-socket"
+    },
+    "lease-database": {
+      "type": "memfile",
+      "lfc-interval": 3600
+    },
+    "valid-lifetime": 600,
+    "max-valid-lifetime": 7200,
+    "subnet4": [
+      {
+        "id": 1,
+        "subnet": "172.16.21.32/27",
+        "pools": [
+          {
+            "pool": "172.16.21.50 - 172.16.21.62"
+          }
+        ],
+        "option-data": [
+          {
+            "name": "routers",
+            "data": "172.16.21.33"
+          },
+          {
+            "name": "domain-name-servers",
+            "data": "8.8.8.8, 8.8.4.4"
+          },
+          {
+            "name": "domain-name",
+            "data": "mydomain.example"
+          }
+        ],
+        "reservations": [
+          {
+            "hw-address": "BC:24:11:C8:1F:F7",
+            "ip-address": "172.16.21.38",
+            "hostname": "GInfra-Host1"
+          },
+          {
+            "hw-address": "BC:24:11:C8:1F:F8",
+            "ip-address": "172.16.21.39",
+            "hostname": "GInfra-Host2"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "subnet": "172.16.20.0/27",
+        "pools": [
+          {
+            "pool": "172.16.20.10 - 172.16.20.30"
+          }
+        ],
+        "option-data": [
+          {
+            "name": "routers",
+            "data": "172.16.20.1"
+          },
+          {
+            "name": "domain-name-servers",
+            "data": "8.8.8.8, 8.8.4.4"
+          },
+          {
+            "name": "domain-name",
+            "data": "newdomain.example"
+          }
+        ],
+        "reservations": [
+         {   "hw-address": "BC:24:11:3B:9D:1D",
+             "ip-address": "172.16.20.9",
+             "hostname": "MQT-Host1"
+         }
+]
+      }
+    ]
+  }
+}

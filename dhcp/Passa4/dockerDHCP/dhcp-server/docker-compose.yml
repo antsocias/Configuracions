@@ -1,0 +1,27 @@
+services:
+  dhcp-server:
+    build:
+      context: ..
+      dockerfile: dhcp.Dockerfile
+    container_name: Docker-DHCP
+    networks:
+      kea-10-ipvlan: # network that binds container to host network interface.
+        ipv4_address: 172.16.21.34 # ip for kea4 server
+    ports:
+      - 67:67/udp
+      - 67:67/tcp
+      - 8000:8000/tcp
+    volumes:
+      - ./etc/kea:/etc/kea:rw
+      - ./etc/supervisor:/etc/supervisor:rw
+      - ./var/lib/kea:/var/lib/kea:rw
+networks:
+  kea-10-ipvlan: # network that binds container to host network interface.
+    name: kea-10-ipvlan
+    driver: ipvlan
+    driver_opts:
+      parent: ens33 #  host interface that kea containers will use !!!!!!
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: 172.16.21.32/27 # subnet for kea4 server
