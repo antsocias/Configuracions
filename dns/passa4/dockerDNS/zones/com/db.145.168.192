@@ -1,0 +1,20 @@
+$TTL 60s
+145.168.192.in-addr.arpa. IN SOA ns01.viralup.com. admin.primnernomdedomini.ib. (
+    2008052001 ; Serial
+    120s       ; Refresh (2 minuts)
+    60s        ; Retry (1 minut)
+    86400s     ; Expire (1 dia)
+    60s        ; Minimum TTL (1 minut)
+)
+
+; --- Servidors de Noms (NS) ---
+145.168.192.in-addr.arpa. IN NS ns01.viralup.com.
+145.168.192.in-addr.arpa. IN NS ns2.viralup.com.
+
+; --- Registres PTR (Pointers) amb IP completa invertida ---
+70.145.168.192.in-addr.arpa. IN PTR ns01.viralup.com.
+71.145.168.192.in-addr.arpa. IN PTR ns2.viralup.com.
+72.145.168.192.in-addr.arpa. IN PTR mail01.viralup.com.
+73.145.168.192.in-addr.arpa. IN PTR mail02.viralup.com.
+74.145.168.192.in-addr.arpa. IN PTR web.viralup.com.
+75.145.168.192.in-addr.arpa. IN PTR file.viralup.com.

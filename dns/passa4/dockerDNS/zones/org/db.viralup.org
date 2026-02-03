@@ -1,0 +1,28 @@
+$TTL 604800
+viralup.org. IN SOA dns1.viralup.org. admin.viralup.ib. (
+        2008052001
+        120s;
+        60s;
+        60s;
+        60s;
+)
+viralup.org. IN NS dns1.viralup.org.
+viralup.org. IN NS ns1.viralup.org.
+
+ns1.viralup.org. IN A 172.16.20.130
+dns1.viralup.org. IN A 172.16.20.131
+
+viralup.org. IN MX 10 mail01.viralup.org.
+viralup.org. IN MX 20 mail02.viralup.org.
+
+mail01.viralup.org. IN A 172.16.20.132
+mail02.viralup.org. IN A 172.16.20.133
+
+web.viralup.org. IN A 172.16.20.134
+file.viralup.org. IN A 172.16.20.135
+
+www.viralup.org. IN CNAME web.viralup.org.
+ftp.viralup.org. IN CNAME file.viralup.org.
+
+estacions.viralup.org. IN NS ns1.viralup.org.
+estacions.viralup.org. IN NS ns2.viralup.org.

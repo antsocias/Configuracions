@@ -1,0 +1,39 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "viralup.com."{
+        type master;
+        file "/etc/bind/db.viralup.com";
+        allow-transfer {192.168.145.80; };
+};
+zone "145.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.145.168.192";
+        allow-transfer {192.168.145.80; };
+};
+zone "estacions.viralup.com." {
+        type master;
+        file "/etc/bind/db.estacions.viralup.com";
+        allow-transfer {192.168.145.80; };
+};
+// Zona slaves
+zone "viralup.org."{
+        type slave;
+        file "db.viralup.org";
+        masters {192.168.145.80; };
+};
+zone "20.16.172.in-addr.arpa"{
+        type slave;
+        file "db.in-addrarpa";
+        masters {192.168.145.80; };
+};
+zone "estacions.viralup.org."{
+        type slave;
+        file "db.estacions.viralup.org";
+        masters {192.168.145.80; };
+};

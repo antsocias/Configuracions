@@ -1,0 +1,20 @@
+$TTL 60s
+estacions.viralup.org. IN SOA ns1.viralup.org. admin.viralup.ib. (
+    2008052001 ; Serial
+    120s       ; Refresh (2 minuts)
+    60s        ; Retry (1 minut)
+    86400s     ; Expire (1 dia)
+    60s        ; Minimum TTL (1 minut)
+)
+
+; --- Servidors de Noms (NS) de la Subzona ---
+; Aquests s  n els servidors que el DNS primari i secundari responen per la zona.
+estacions.viralup.org. IN NS ns1.viralup.org.
+estacions.viralup.org. IN NS ns2.viralup.org.
+
+; --- Registre A (Adre  a IP) de l'  nica estaci   que   s part d'aquesta subzona ---
+est01.estacions.viralup.org. IN A 172.16.20.136
+est02.estacions.viralup.org. IN A 172.16.20.137
+est03.estacions.viralup.org. IN A 172.16.20.138
+est04.estacions.viralup.org. IN A 172.16.20.139
+est05.estacions.viralup.org. IN A 172.16.20.140
