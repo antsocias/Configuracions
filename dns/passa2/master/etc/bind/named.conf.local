@@ -1,3 +1,4 @@
+//ZONA MASTERS
 zone "viralup.com."{
         type master;
         file "/etc/bind/db.viralup.com";
