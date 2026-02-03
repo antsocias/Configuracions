@@ -1,0 +1,12 @@
+zone "viralup.com."{
+        type master;
+        file "/etc/bind/db.viralup.com";
+};
+zone "145.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.145.168.192";
+};
+zone "estacions.viralup.com." {
+        type master;
+        file "/etc/bind/db.estacions.viralup.com";
+};

@@ -1,0 +1,15 @@
+zone "viralup.com."{
+        type master;
+        file "/etc/bind/db.viralup.com";
+        allow-transfer {192.168.145.80; };
+};
+zone "145.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.145.168.192";
+        allow-transfer {192.168.145.80; };
+};
+zone "estacions.viralup.com." {
+        type master;
+        file "/etc/bind/db.estacions.viralup.com";
+        allow-transfer {192.168.145.80; };
+};
