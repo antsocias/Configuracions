@@ -1,0 +1,5 @@
+#Configuracio usuari4
+local_root=/home/ftpradius/usuari4
+write_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES

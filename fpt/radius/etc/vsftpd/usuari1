@@ -1,0 +1,3 @@
+#Configuracio usuari1
+local_root=/home/ftpradius/usuari1
+anon_upload_enable=YES
