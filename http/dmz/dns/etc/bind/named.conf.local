@@ -1,0 +1,9 @@
+zone "viralup.com."{
+        type master;
+        file "/etc/bind/db.viralup.com";
+};
+
+zone "viralup.org."{
+        type master;
+        file "/etc/bind/db.viralup.org";
+};
