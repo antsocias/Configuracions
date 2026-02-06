@@ -1,0 +1,15 @@
+#!/bin/bash
+# Indicamos cu  l ser   el directorio personal del {nom_usuari}.
+local_root=/srv/ftp/virtual
+
+# La directiva "write_enable=YES" es innecesaria con la configuraci  n
+# de este ejemplo ya que la siguiente directiva virtual_use_local_privs
+# le asigna a este usuario virtual los mismos privilegios que se
+# especificaron en el archivo /etc/vsftpd.conf para los usuarios
+# locales, en el cual ya se encuentra definida esta directiva.
+write_enable=NO
+
+# Con virtual_use_local_privs igualado a YES, supone indicar que
+# los usuarios virtuales tendr  n los mismos privilegios que los
+# usuarios locales.
+virtual_use_local_privs=YES
